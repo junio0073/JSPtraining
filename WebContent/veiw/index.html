@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script>
+<!--
+	//로그인 체크 function
+	function loginck() {
+		//id 입력 확인
+		if (document.login.userID.value == "") {
+			alert("아이디를 입력하세요.");
+			document.login.userID.focus();
+			return;
+		}
+
+		//비밀번호 확인
+		if (document.login.userPW.value == "") {
+			alert("비밀번호를 입력하세요.");
+			document.login.userPW.focus();
+			return;
+		}
+
+		document.login.submit();
+		return;
+	}
+//-->
+</script>
+</head>
+<body>
+	<form action="loginck.jsp" method="post" name="login">
+		아이디 : <input type="text" name="userID"></input> 
+		비밀번호 : <input type="password" name="userPW"></input> 
+		<input type="reset"></input> 
+		<input	type="button" onclick="loginck()" value="로그인"></input>
+	</form>
+</body>
+</html>
